@@ -1,0 +1,14 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giriş • SahaRaporcusu</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="container">
+  <h1>Giriş</h1>
+  {% if error %}<div class="alert">{{ error }}</div>{% endif %}
+  <form method="post" action="/login">
+    <label>Kullanıcı Adı</label>
+    <input type="text" name="username" placeholder="saha" required>
+    <label>Şifre</label>
+    <input type="password" name="password" placeholder="raporcusu" required>
+    <button type="submit">Giriş Yap</button>
+  </form>
+</div></body></html>

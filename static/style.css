@@ -1,0 +1,15 @@
+*{box-sizing:border-box}body{font-family:system-ui,Arial,sans-serif;margin:0;background:#0b0f19;color:#e8ecf1}
+.container{max-width:900px;margin:0 auto;padding:24px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+h1{margin:0 0 12px}
+.card{background:#121829;border:1px solid #1d2741;padding:16px;border-radius:16px;margin:16px 0}
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+label{display:block;margin:6px 0}
+input[type=file],input[type=text],input[type=password],input[type=number]{width:100%;padding:10px;border-radius:10px;border:1px solid #24314f;background:#0e1424;color:#e8ecf1}
+button,.btn{display:inline-block;background:#3b82f6;color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:600;text-decoration:none}
+.btn.ghost{background:#26324f}
+.logo-grid .logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:8px;margin-bottom:8px}
+.logo-item{background:#0e1424;border:1px solid #24314f;border-radius:10px;padding:6px;display:flex;align-items:center;justify-content:center;height:88px}
+.logo-item img{max-width:100%;max-height:72px}
+.alert{background:#5b2530;border:1px solid #b03e46;padding:10px;border-radius:10px;margin:10px 0}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}

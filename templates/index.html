@@ -1,0 +1,42 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SahaRaporcusu Araçları</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="container">
+  <header class="top">
+    <h1>⚽ SahaRaporcusu Araçları</h1>
+    <a class="btn ghost" href="/logout">Çıkış</a>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <h2>1) Telif Koruma (Logo Blur)</h2>
+      <p>Videonu seç; sistem dosyayı <b>video.mp4</b> olarak işleyip indirmen için hazırlar.</p>
+      <form action="/telif" method="post" enctype="multipart/form-data">
+        <input type="file" name="video" accept="video/*" required>
+        <button type="submit">Yükle ve İşle</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>2) Gol Çarpışma Videosu (90sn)</h2>
+      <p>Aşağıdan en fazla 6 logo seç → 90sn video üret. Gol sayısı rastgele <b>2–5</b>.</p>
+      <form action="/generate" method="post">
+        <div class="logo-grid">
+          {% for cat in cats %}
+            <h3 class="cat">{{ cat.name }}</h3>
+            <div class="logos">
+              {% for f in cat.files %}
+                <label class="logo-item"><input type="checkbox" name="logos" value="{{ f }}"><img src="{{ f }}"></label>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="row">
+          <label>Minimum Gol</label><input type="number" name="min_goals" min="0" value="2">
+          <label>Maksimum Gol</label><input type="number" name="max_goals" min="1" value="5">
+        </div>
+        <button type="submit">Videoyu Oluştur</button>
+      </form>
+    </div>
+  </div>
+</div></body></html>
