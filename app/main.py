@@ -18,8 +18,8 @@ TELIF_DIR = BASE_DIR / "telif_koruma"
 
 # --- Auth config ---
 APP_SECRET = os.environ.get("APP_SECRET", "saharaporcusu-secret")
-LOGIN_USER = os.environ.get("APP_USER", "saha")
-LOGIN_PASS = os.environ.get("APP_PASS", "raporcusu")
+LOGIN_USER = os.environ.get("APP_USER", "Ahmet123")
+LOGIN_PASS = os.environ.get("APP_PASS", "Ahmet123")
 
 app = FastAPI(title="SahaRaporcusu Web")
 app.add_middleware(SessionMiddleware, secret_key=APP_SECRET)
